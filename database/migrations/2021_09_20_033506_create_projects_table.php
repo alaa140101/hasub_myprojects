@@ -17,6 +17,7 @@ class CreateProjectsTable extends Migration
             $table->id();
             $table->string('title');
             $table->text('description');
+            // $table->integer('tasks')->default(3);
             $table->unsignedInteger('status')->default(0);
             $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();

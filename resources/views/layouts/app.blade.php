@@ -18,6 +18,24 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <style>
+        img {
+        height: 12px;
+        margin: 0 0.125em;
+        color: lightslategray;
+        }
+        .btn-delete {
+            background: url('/images/trash.svg');
+            background-repeat: no-repeat;
+            background-size: 15px;
+            padding-bottom: 0px;
+            padding-top: 0px;
+            padding-left: 0px;
+            padding-right: 20px;
+            border: 0px;
+            outline: none;
+        }
+    </style>
 </head>
 <body>
     <div id="app">

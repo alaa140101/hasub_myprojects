@@ -11,6 +11,7 @@
 </header>
 
 <section>
+<div class="row">
   @forelse ($projects as $project)
     <div class="col-4 mb-4">
       <div class="card">
@@ -30,7 +31,7 @@
               <a href="/projects/{{ $project->id }}">{{ $project->title }}</a>
             </h5>
             <div class="card-text mt-4">
-                {{ $project->description }}
+                {{ Str::limit($project->description, 150) }}
             </div>
 
             @include('projects.footer')
@@ -46,6 +47,7 @@
         </div>
     </div>
   @endforelse
+</div>
 </section>
 
 @endsection

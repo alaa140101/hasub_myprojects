@@ -13,7 +13,7 @@
 <section class='row text-right' dir="rtl" >
     <div class="col-lg-4">
         {{-- Project Details --}}
-            <div class="card text-right">
+            <div class="card text-right mb-3">
               <div class="card-body">
                 <div class="status">
                   @switch($project->status)
@@ -54,6 +54,28 @@
 
     <div class="col-lg-8">
         {{-- Project tasks --}}
+        @foreach ($project->tasks as $task)
+            <div class="card p-1">
+                <div class="{{ $task->done ? 'checked muted' : ''}}">
+                    {{$task->body}}
+                </div>
+                <div>
+                    <form action="/projects/{{$project->id}}/tasks/{{$task->id}}" method="post">
+                        @csrf
+                        @method('PATCH')
+                        <input type="checkbox" name="done" id="done" class="form-control ml-4" {{ $task->done ? 'checked' : ''}} onchange="this.form.submit()">
+                    </form>
+                </div>
+            </div>
+        @endforeach
+
+        <div class="card mt-3">
+            <form action="/projects/{{$project->id}}/tasks" method="post">
+                @csrf
+                <input type="text" class="form-control p-2 ml-2" name="body" placeholder="اضف مهمة جديدة">
+                <button type="submit" class="btn btn-primary">اضافة</button>
+            </form>
+        </div>
     </div>
 </section>
 @endsection

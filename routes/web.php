@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TaskController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +24,7 @@ Auth::routes();
 Route::resource('/projects', ProjectController::class)->middleware('auth');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::post('/projects/{project}/tasks', [TaskController::class, 'store']);
+
+Route::patch('/projects/{project}/tasks/{task}', [TaskController::class, 'update']);

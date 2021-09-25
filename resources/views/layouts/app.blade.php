@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }} - @yield('title', '')</title>
+    <title>{{ config('app.name', 'Laravel') }}  @yield(' - title', '')</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -20,14 +20,14 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <style>
         img {
-        height: 12px;
+        height: 1.1rem;
         margin: 0 0.125em;
         color: lightslategray;
         }
         .btn-delete {
             background: url('/images/trash.svg');
             background-repeat: no-repeat;
-            background-size: 15px;
+            background-size: 1.1rem 1.1rem;
             padding-bottom: 0px;
             padding-top: 0px;
             padding-left: 0px;
@@ -35,6 +35,10 @@
             border: 0px;
             outline: none;
         }
+        .checked {
+            text-decoration: line-through;
+        }
+
     </style>
 </head>
 <body>

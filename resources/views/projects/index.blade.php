@@ -11,11 +11,11 @@
 </header>
 
 <section>
-<div class="row">
+<div class="row" dir="rtl">
   @forelse ($projects as $project)
     <div class="col-4 mb-4">
       <div class="card">
-        <div class="card-body">
+        <div class="card-body text-right">
           <div class="status">
             @switch($project->status)
                 @case(1)

@@ -9,7 +9,7 @@
         <div class="d-flex align-items-center mr-4">
             <img src="/images/tasks.svg" alt="">
             <div class="mr-2">
-                {{-- {{ count($project->tasks) }} --}}
+                {{ count($project->tasks) }}
             </div>
         </div>
 

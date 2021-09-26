@@ -55,22 +55,29 @@
     <div class="col-lg-8">
         {{-- Project tasks --}}
         @foreach ($project->tasks as $task)
-            <div class="card p-1">
+            <div class="card d-flex flex-row align-items-center p-2">
                 <div class="{{ $task->done ? 'checked muted' : ''}}">
                     {{$task->body}}
                 </div>
-                <div>
-                    <form action="/projects/{{$project->id}}/tasks/{{$task->id}}" method="post">
+                <div class="mr-auto">
+                    <form action="/projects/{{$task->project_id}}/tasks/{{$task->id}}" method="post">
                         @csrf
                         @method('PATCH')
                         <input type="checkbox" name="done" id="done" class="form-control ml-4" {{ $task->done ? 'checked' : ''}} onchange="this.form.submit()">
+                    </form>
+                </div>
+                <div class="d-flex align-items-center mr-3">
+                    <form action="/projects/{{$project->id}}/tasks/{{$task->id}}" method="post">
+                        @method('DELETE')
+                            @csrf
+                        <input type="submit" class="btn btn-delete" value="">
                     </form>
                 </div>
             </div>
         @endforeach
 
         <div class="card mt-3">
-            <form action="/projects/{{$project->id}}/tasks" method="post">
+            <form action="/projects/{{$project->id}}/tasks" method="post" class="d-flex flex-row">
                 @csrf
                 <input type="text" class="form-control p-2 ml-2" name="body" placeholder="اضف مهمة جديدة">
                 <button type="submit" class="btn btn-primary">اضافة</button>

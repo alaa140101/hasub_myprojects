@@ -27,4 +27,9 @@ class TaskController extends Controller
         return back();
         // return request()->all();
     }
+
+    public function destroy(Project $project, Task $task) {
+        $task->delete();
+        return redirect('/projects/'. $project->id);
+    }
 }

@@ -8,7 +8,7 @@
   <div class="col-md-6 mx-auto">
     <div class="card pt-3">
       <div class="text-center">
-        <img src="{{ asset(auth()->user()->image) }}" width="82px" height="125px" alt="">
+        <img src="{{ asset('stroage/' . auth()->user()->image) }}" width="82px" height="125px" alt="">
         <h3>{{ auth()->user()->name }}</h3>
       </div>
       <div class="card-body text-right" dir="rtl">
@@ -28,8 +28,8 @@
             <input type="password" name="password" id="password" class="form-control">
           </div>
           <div class="form-group">
-            <label for="confirm-password">تأكيد كلمة المرور</label>
-            <input type="password" name="confirm-password" id="confirm-password" class="form-control">
+            <label for="password-confirmation">تأكيد كلمة المرور</label>
+            <input type="password" name="password-confirmation" id="password-confirmation" class="form-control">
           </div>
           <div class="form-group">
             <label for="image">تغيير الصورة الشخصية</label>

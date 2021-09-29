@@ -41,7 +41,7 @@ return [
     'digits_between'       => 'يجب أن يحتوي حقل :attribute بين :min و :max رقمًا/أرقام .',
     'dimensions'           => 'الحقل:attribute يحتوي على أبعاد صورة غير صالحة.',
     'distinct'             => 'للحقل :attribute قيمة مُكرّرة.',
-    'email'                => 'يجب أن يكون حقل عنوان بريد إلكتروني صحيح البُنية.',
+    'email'                => 'يجب أن يكون حقل :attribute عنوان بريد إلكتروني صحيح البُنية.',
     'ends_with'            => 'يجب أن ينتهي حقل :attribute بأحد القيم التالية: :values',
     'exists'               => 'القيمة المحددة :attribute غير موجودة.',
     'file'                 => 'الحقل :attribute يجب أن يكون ملفا.',
@@ -97,7 +97,6 @@ return [
     'not_regex'            => 'صيغة حقل :attribute غير صحيحة.',
     'numeric'              => 'يجب على حقل :attribute أن يكون رقمًا.',
     'password'             => 'كلمة المرور غير صحيحة.',
-    'password-confirmation' => 'كلمة المرور غير متطابقة.',
     'present'              => 'يجب تقديم حقل :attribute.',
     'prohibited'           => 'حقل :attribute محظور.',
     'prohibited_if'        => 'حقل :attribute محظور إذا كان :other هو :value.',
@@ -125,5 +124,10 @@ return [
     'unique'               => 'قيمة حقل :attribute مُستخدمة من قبل.',
     'uploaded'             => 'فشل في تحميل الـ :attribute.',
     'url'                  => 'صيغة رابط حقل :attribute غير صحيحة.',
-    'uuid'                 => 'حقل :attribute يجب أن يكون بصيغة UUID سليمة.'
-    ];
+    'uuid'                 => 'حقل :attribute يجب أن يكون بصيغة UUID سليمة.',
+    'custom'               => [
+        'attribute-name' => [
+            'rule-name' => 'custom-message',
+        ],
+    ],
+];

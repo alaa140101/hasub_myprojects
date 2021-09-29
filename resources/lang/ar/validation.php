@@ -130,4 +130,45 @@ return [
             'rule-name' => 'custom-message',
         ],
     ],
+	/*
+    |--------------------------------------------------------------------------
+    | Custom Validation Attributes
+    |--------------------------------------------------------------------------
+    |
+    | The following language lines are used to swap our attribute placeholder
+    | with something more reader friendly such as "E-Mail Address" instead
+    | of "email". This simply helps us make our message more expressive.
+    |
+    */
+
+    'attributes' => [
+	'name'                  => 'الاسم',
+       'username'              => 'اسم المُستخدم',
+       'email'                 => 'البريد الالكتروني',
+       'first_name'            => 'الاسم الأول',
+       'last_name'             => 'اسم العائلة',
+       'password'              => 'كلمة المرور',
+       'password_confirmation' => 'تأكيد كلمة المرور',
+       'city'                  => 'المدينة',
+       'country'               => 'الدولة',
+       'address'               => 'عنوان السكن',
+       'phone'                 => 'الهاتف',
+       'mobile'                => 'الجوال',
+       'age'                   => 'العمر',
+       'sex'                   => 'الجنس',
+       'gender'                => 'النوع',
+       'day'                   => 'اليوم',
+       'month'                 => 'الشهر',
+       'year'                  => 'السنة',
+       'hour'                  => 'ساعة',
+       'minute'                => 'دقيقة',
+       'second'                => 'ثانية',
+       'title'                 => 'العنوان',
+       'content'               => 'المُحتوى',
+       'description'           => 'الوصف',
+       'excerpt'               => 'المُلخص',
+       'date'                  => 'التاريخ',
+       'time'                  => 'الوقت',
+       'available'             => 'مُتاح',
+       'size'                  => 'الحجم',],
 ];

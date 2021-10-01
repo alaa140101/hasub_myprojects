@@ -33,12 +33,13 @@
                       {{ $project->description }}
                   </div>
 
-                  @include('projects.footer')
                 </div>
-              </div>
+            </div>
+            @include('projects.footer')
             </div>
       <div class="card">
           <div class="card-body">
+              <h5 class="font-weight-bold">تغيير حالة المشروع</h5>
               <form action="/projects/{{ $project->id }}" method="post" >
                 @csrf
                 @method('PATCH')
@@ -55,7 +56,7 @@
     <div class="col-lg-8">
         {{-- Project tasks --}}
         @foreach ($project->tasks as $task)
-            <div class="card d-flex flex-row align-items-center p-2">
+            <div class="card d-flex flex-row align-items-center mt-2 p-4">
                 <div class="{{ $task->done ? 'checked muted' : ''}}">
                     {{$task->body}}
                 </div>
@@ -70,7 +71,7 @@
                     <form action="/projects/{{$project->id}}/tasks/{{$task->id}}" method="post">
                         @method('DELETE')
                             @csrf
-                        <input type="submit" class="btn btn-delete" value="">
+                        <input type="submit" class="btn btn-delete mt-1" value="">
                     </form>
                 </div>
             </div>
@@ -79,7 +80,7 @@
         <div class="card mt-3">
             <form action="/projects/{{$project->id}}/tasks" method="post" class="d-flex flex-row">
                 @csrf
-                <input type="text" class="form-control p-2 ml-2" name="body" placeholder="اضف مهمة جديدة">
+                <input type="text" class="form-control p-2 ml-2 border-0" name="body" placeholder="اضف مهمة جديدة">
                 <button type="submit" class="btn btn-primary">اضافة</button>
             </form>
         </div>

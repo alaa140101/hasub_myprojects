@@ -9,7 +9,7 @@
     <div class="card pt-3">
       <div class="text-center">
         <img src="{{ asset('storage/' . auth()->user()->image) }}" width="82px" height="125px" alt="">
-        <h3>{{ auth()->user()->name }}</h3>
+        <h3 class="mt-5 font-weight-bold">{{ auth()->user()->name }}</h3>
       </div>
       <div class="card-body text-right" dir="rtl">
         <form action="/profile" method="post" enctype="multipart/form-data">

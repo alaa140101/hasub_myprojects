@@ -14,8 +14,8 @@
 <div class="row" dir="rtl">
   @forelse ($projects as $project)
     <div class="col-4 mb-4">
-      <div class="card">
-        <div class="card-body text-right">
+      <div class="card text-right" style="height: 230px">
+        <div class="card-body">
           <div class="status">
             @switch($project->status)
                 @case(1)
@@ -34,9 +34,9 @@
                 {{ Str::limit($project->description, 150) }}
             </div>
 
-            @include('projects.footer')
-          </div>
         </div>
+    </div>
+    @include('projects.footer')
       </div>
     </div>
   @empty
